@@ -9,6 +9,13 @@
     "license": "Other OSI approved licence",
     "depends": ["base"],
     "external_dependencies": {},
-    "data": [],
-    "assets": {},
+    "data": ["views/res_config_settings.xml", "views/superset_dashboard.xml"],
+    "assets": {
+        "web.assets_backend": [
+            "g2p_superset_dashboard/static/src/components/**/*.js",
+            "g2p_superset_dashboard/static/src/components/**/*.xml",
+            "g2p_superset_dashboard/static/src/components/**/*.css",
+            "g2p_superset_dashboard/static/src/components/**/*.scss",
+        ],
+    },
 }
