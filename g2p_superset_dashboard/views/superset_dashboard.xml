@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="action_g2p_superset_dashboard" model="ir.actions.client">
-        <field name="name">Farmer Profile Dashboard</field>
+        <field name="name">Dashboard</field>
         <field name="tag">g2p.superset_dashboard</field>
     </record>
 
