@@ -18,10 +18,10 @@ export class G2PSupersetDashboard extends Component {
         });
 
         const orm = this.env.services.orm;
-        this.getSupersertUrl(orm);
+        this.getSupersetUrl(orm);
     }
 
-    async getSupersertUrl(orm) {
+    async getSupersetUrl(orm) {
         const data = await orm.searchRead(
             "ir.config_parameter",
             [["key", "=", "g2p_superset_dashboard.superset_url"]],
