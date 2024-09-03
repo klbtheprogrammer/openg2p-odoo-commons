@@ -1,14 +1,13 @@
 /** @odoo-module */
-import { registry } from "@web/core/registry";
-import { Component, useState } from "@odoo/owl";
-import { getDefaultConfig } from "@web/views/view";
+import {registry} from "@web/core/registry";
+import {Component, useState} from "@odoo/owl";
 
 export class G2PSupersetDashboardEmbedded extends Component {
     setup() {
         this.state = useState({
             isLoading: true,
-            dashboards: [],    
-            dashboardUrl: "", 
+            dashboards: [],
+            dashboardUrl: "",
         });
 
         const orm = this.env.services.orm;
@@ -17,9 +16,9 @@ export class G2PSupersetDashboardEmbedded extends Component {
 
     async loadDashboards(orm) {
         // Fetch dashboard configurations
-        const dashboardData = await orm.searchRead("g2p.superset.dashboard.config", [], ['name', 'url']);
+        const dashboardData = await orm.searchRead("g2p.superset.dashboard.config", [], ["name", "url"]);
         this.state.dashboards = dashboardData;
-        
+
         if (dashboardData.length > 0) {
             this.state.dashboardUrl = dashboardData[0].url;
         }
@@ -33,5 +32,5 @@ export class G2PSupersetDashboardEmbedded extends Component {
     }
 }
 
-G2PSupersetDashboardEmbedded.template = 'g2p_superset_dashboard.G2PSupersetDashboardEmbedded';
+G2PSupersetDashboardEmbedded.template = "g2p_superset_dashboard.G2PSupersetDashboardEmbedded";
 registry.category("actions").add("g2p.superset_dashboard_embedded", G2PSupersetDashboardEmbedded);

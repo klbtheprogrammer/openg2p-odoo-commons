@@ -6,10 +6,12 @@
     </record>
 
     <!-- Menu Item for Embedded Dashboard -->
-    <menuitem id="menu_superset_dashboard_embedded"
-            name="Superset Dashboards"
-            sequence="1"
-            action="action_superset_dashboard_embedded"
-            web_icon="g2p_superset_dashboard,static/description/dashboard_icon.png"/>
+    <menuitem
+        id="menu_superset_dashboard_embedded"
+        name="Superset Dashboards"
+        sequence="1"
+        action="action_superset_dashboard_embedded"
+        web_icon="g2p_superset_dashboard,static/description/dashboard_icon.png"
+    />
 
 </odoo>
